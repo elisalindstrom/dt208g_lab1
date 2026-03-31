@@ -1,14 +1,68 @@
 /* Base */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  padding: 2rem 1rem 2rem 1rem;
+  width: 100%;
+  max-width: 500px;
 }
 
 body {
-    background-color: mintcream;
-    color: #000000;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.5;
-    font-size: 16px;
+  background-color: mintcream;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+}
+
+/* Form */
+#course-form {
+  background-color: aliceblue;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px #D9D9D9;
+}
+
+label {
+  display: block;
+  margin-top: 0.3rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.8rem;
+  min-height: 44px;
+  border: 1px solid #D9D9D9;
+  border-radius: 8px;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  cursor: text;
+}
+
+select {
+  max-width: 230px;
+  width: 100%;
+  padding: 0.8rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  min-height: 44px;
+  border: 1px solid #D9D9D9;
+  border-radius: 8px;
+  cursor: pointer;
 }
