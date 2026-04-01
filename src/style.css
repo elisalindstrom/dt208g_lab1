@@ -35,6 +35,10 @@ body {
   font-size: 16px;
 }
 
+.strong {
+  font-weight: bold;
+}
+
 h1 {
   font-size: 28px;
   margin-bottom: 1rem;
@@ -46,9 +50,14 @@ h2 {
   margin-bottom: 1rem;
 }
 
+a {
+  color: rebeccapurple;
+  text-underline-offset: 2px;
+}
+
 button {
   cursor: pointer;
-  border: 1px solid thistle;
+  border: transparent;
   background-color: thistle;
   padding: 0.5rem 1rem;
   border-radius: 8px;
@@ -62,12 +71,35 @@ button:hover {
   opacity: 0.7;
 }
 
+.remove-btn {
+  background-color: #D9D9D9;
+}
+
+/* List */
 ul {
   list-style: none;
   background-color: aliceblue;
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 3px 10px #D9D9D9;
+}
+
+li {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #D9D9D9;
+  padding-bottom: 0.3rem;
+}
+
+.list-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
 }
 
 /* Form */
@@ -77,6 +109,11 @@ ul {
   border-radius: 8px;
   box-shadow: 0 3px 10px #D9D9D9;
   margin-bottom: 2rem;
+}
+
+#error-message {
+  color: tomato;
+  margin-top: 0.5rem;
 }
 
 label {

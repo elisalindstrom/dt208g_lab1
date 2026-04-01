@@ -22,16 +22,17 @@
 
           <label for="progression">Progression</label>
           <select name="progression" id="progression" required>
-            <option value=""></option>
-            <option value="A">A</option>
-            <option value="B">B</option>
-            <option value="C">C</option>
+            <option value="" disabled selected>Välj</option>
+            <option value="1">A</option>
+            <option value="2">B</option>
+            <option value="3">C</option>
           </select>
 
-          <label for="syllabus">URL till kursplanen</label>
+          <label for="syllabus">URL till kursplan</label>
           <input id="syllabus" name="syllabus" type="text" required>
 
           <button id="submit-btn" type="submit">Spara</button>
+          <p id="error-message" class="hidden"></p>
         </form>
 
         <ul id="course-list" class="hidden"></ul>
