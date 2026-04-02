@@ -50,16 +50,17 @@ courseForm.addEventListener("submit", (event) => {
 
 // Skriv ut kurs i kurslista
 function printCourse(): void {
+  const courseListContainer = document.querySelector("#course-list-container") as HTMLDivElement;
   const courseList = document.querySelector("#course-list") as HTMLUListElement;
   courseList.innerHTML = "";
 
   let savedCourses: Course[] = JSON.parse(localStorage.getItem("courses") || "[]");
 
   if (savedCourses.length === 0) {
-    courseList.classList.add("hidden");
+    courseListContainer.classList.add("hidden");
     return;
   }
-  courseList.classList.remove("hidden");
+  courseListContainer.classList.remove("hidden");
 
   savedCourses.forEach(course => {
     const liEl = document.createElement("li");
@@ -82,7 +83,7 @@ function printCourse(): void {
   })
 }
 
-// Ta bort kurs från kurslista
+// Ta bort kurs från kurslista och localStorage
 function deleteCourse(code: string): void {
   let savedCourses: Course[] = JSON.parse(localStorage.getItem("courses") || "[]");
   savedCourses = savedCourses.filter(course => course.code !== code);
