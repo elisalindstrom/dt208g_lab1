@@ -31,7 +31,7 @@ courseForm.addEventListener("submit", (event) => {
   };
 
   // Kontroll om kurskoden redan finns sparad i localStorage
-  let courseExists: boolean = savedCourses.some(course => course.code === newCourse.code);
+  let courseExists: boolean = savedCourses.some(course => course.code.trim().toLowerCase() === newCourse.code.trim().toLowerCase());
 
   // Om kurskoden inte finns sparad
   if (courseExists === false) {
